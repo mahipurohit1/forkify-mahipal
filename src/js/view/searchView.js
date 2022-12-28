@@ -3,6 +3,7 @@ class SerchView {
 
   getQuery() {
     const data = this._parentElement.querySelector('.search__field').value;
+    if (!data) return;
     this._clearInput();
     return data;
   }
