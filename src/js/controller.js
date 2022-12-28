@@ -35,7 +35,7 @@ const controllSearchResults = async function () {
   try {
     resultView.renderSpinner();
     const query = searchView.getQuery();
-    if (!query) return;
+    if (!query) throw Error('Enter valid input');
 
     await model.loadSearchQuery(query);
 
